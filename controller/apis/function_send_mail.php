@@ -1,3 +1,4 @@
+<!-- function that contains mail smtp mail configuration settings -->
 <?php
 	use PHPMailer\PHPMailer\PHPMailer;
 	use PHPMailer\PHPMailer\Exception;

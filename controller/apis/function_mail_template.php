@@ -1,7 +1,9 @@
+<!-- function for HTML template sent via mail -->
 <?php
     require_once 'function_send_mail.php';
 
     function sendMail($user_id, $user_mail, $new_user_token){
+        //redirection page when user clicks on verify email link
         $url= 'http://localhost/Test%20HTML%20site/controller/apis/verify_user.php?token='.$new_user_token;
 
         $buttonText = 'Verify Email';
@@ -108,6 +110,7 @@
 
         $subject = 'Verification of mail !!';
         if(isset($user_id)){
+            //calling smtp mail function that contains mail configuration
             $mail_status = smtp_mailer($user_mail, $subject, $body);
             if($mail_status['status']){
                 return array( "status" => true, "message" => "Mail sent successfully." );
