@@ -1,4 +1,3 @@
-<!-- function for HTML template sent via mail -->
 <?php
     require_once 'function_send_mail.php';
 
@@ -86,7 +85,6 @@
             </head>
 
             <body>
-            <div id="notification" class="alert"></div>
                 <div class="container">
                     <div class="header">
                         <h1>Email Verification</h1>
@@ -110,7 +108,7 @@
 
         $subject = 'Verification of mail !!';
         if(isset($user_id)){
-            //calling smtp mail function that contains mail configuration
+            //calling function that contains mail configuration
             $mail_status = smtp_mailer($user_mail, $subject, $body);
             if($mail_status['status']){
                 return array( "status" => true, "message" => "Mail sent successfully." );

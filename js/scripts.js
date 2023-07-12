@@ -6,6 +6,11 @@
 // This file is intentionally blank
 // Use this file to add JavaScript to your project
 
+function showSuccessMessage() {
+    var successMessage = document.getElementById("submitSuccessMessage");
+    successMessage.classList.remove("d-none");
+}
+
 //declaring a const variable for storing user details on click of Sign Up button
 const registerUser = document.getElementById('submitButton');
 
